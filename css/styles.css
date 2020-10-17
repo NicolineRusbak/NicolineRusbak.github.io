@@ -11,9 +11,9 @@ html {
 body {
     --color-white: #F7F8FB;
     --section-light: #EEF0F7;
-    --section-dark: #001D38;
-    --color-blue: #615CFD;
-    --color-purple: #9B4BEB;
+    --section-dark: #084B83;
+    --color-blue: #6CB7FF;
+    --color-green: #01FFD5;
     background-color: var(--color-white);
 }
 
@@ -91,7 +91,11 @@ nav li a {
 }
 
 nav li:hover {
-    background-color: var(--color-blue);
+    border-bottom: 5px solid var(--color-green);
+}
+
+nav li:active {
+    background-color: var(--color-green);
 }
 
 .active {
@@ -103,8 +107,9 @@ button {
     height: 52px;
     background-color: #ffffff;
     border: 3px solid var(--color-blue);
-    border-radius: 26px;
+    border-radius: 10px;
     font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
     color: var(--section-dark);
     font-size: 16px;
     cursor: pointer;
@@ -137,7 +142,7 @@ a {
 }
 
 footer {
-    background-image: url(../img/footer.jpg);
+    background-image: url(../img/footer2.jpg);
     background-size: cover;
     max-width: 100%;
 }
@@ -172,7 +177,7 @@ footer .icon {
 
 /* --------------Landing page -----------------*/
 .hero {
-    background-image: url(../img/hero.jpg);
+    background-image: url(../img/landing.jpg);
     background-size: cover;
     max-width: 100%;
     height: 100vh;
@@ -203,7 +208,7 @@ footer .icon {
 }
 
 .kompetencer {
-    min-height: 700px;
+    padding: 1vh 0;
 }
 
 .center-text h2, .center-text h3{
@@ -231,7 +236,7 @@ footer .icon {
 
 .ikoner:before {
     font-size: 50px;
-    background: -webkit-linear-gradient(var(--color-blue), var(--color-purple));
+    background: -webkit-linear-gradient(var(--color-blue), var(--color-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -242,39 +247,6 @@ footer .icon {
 
 .box-text {
     padding: 20px;
-}
-
-
-.lp-portfolio {
-    height: 600px;
-}
-
-.lp-portfolio h2 {
-    margin: auto;
-    max-width: 70vw;
-}
-
-.thumbnails {
-    margin: 5vh 18vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-.thumbnails img {
-    width: 18vw;
-    height: 18vw;
-    transition: ease 0.6s;
-}
-
-.thumbnails img:hover {
-    width: 22vw;
-    height: 22vw;
-}
-
-
-.lp-portfolio button {
-    position: absolute;
-    left: 45%;
 }
 
 /* --------------Profil side -----------------*/
@@ -346,7 +318,7 @@ footer .icon {
 .purple-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: var(--color-purple);
+    color: var(--color-green);
 }
 
 .knapper {
