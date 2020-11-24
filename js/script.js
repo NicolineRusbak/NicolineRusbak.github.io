@@ -1,14 +1,6 @@
-//funktione´der fjerner webapps
-function function1() {
-    let umf = document.getElementById("umf");
-    if (umf.style.display === "none") {
-      umf.style.display = "block";
-    } else {
-      umf.style.display = "none";
-    }
-}
-//funktione´der fjerner websitets
-function function2() {
+
+//funktion der fjerner webapp
+function showWebsite() {
     let df = document.getElementById("df");
     if (df.style.display === "none") {
       df.style.display = "block";
@@ -16,3 +8,17 @@ function function2() {
       df.style.display = "none";
     }
 }
+
+//funktion der fjerner websites
+function showWebapp() {
+  let umf = document.getElementById("umf");
+  let cf = document.getElementById("cf");
+  if (umf.style.display === "none" & cf.style.display === "none") {
+    umf.style.display = "block";
+    cf.style.display = "block";
+  } else {
+    umf.style.display = "none";
+    cf.style.display = "none";
+  }
+}
+

@@ -10,13 +10,16 @@ html {
 
 body {
     --color-white: #F7F8FB;
-    --section-light: #EEF0F7;
-    --section-dark: #084B83;
+    --section-light: #ebf1f5;
+    --section-dark: #043863;
     --color-blue: #6CB7FF;
     --color-green: #01FFD5;
     background-color: var(--color-white);
 }
 
+::selection {
+    background: var(--color-green);
+}
 
 p {
     font-family: 'Quicksand', sans-serif;
@@ -41,6 +44,12 @@ h2 {
     font-weight: 600;
     padding-top: 50px;
     margin: 0;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 22px;
+    margin-bottom: 0.7em;
 }
 
 h4 {
@@ -107,12 +116,12 @@ button {
     height: 52px;
     background-color: #ffffff;
     border: 3px solid var(--color-blue);
-    border-radius: 10px;
+    border-radius: 25px;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
     color: var(--section-dark);
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0 3px 6px 0 #0000001c;
 }
 
 a {
@@ -128,7 +137,7 @@ a {
     border-radius: 50%;
     position: absolute;
     left: 48.5%;
-    top: 90vh;
+    top: 88vh;
 }
 
 .scroll .icon {
@@ -143,6 +152,7 @@ a {
 
 footer {
     background-image: url(../img/footer2.jpg);
+    /* Lukas, 2017, arbejde baerbar computer data [ONLINE]. Available at: https://www.pexels.com/da-dk/foto/arbejde-baerbar-computer-computer-data-574073/ [Accessed 30 April 2020]. */
     background-size: cover;
     max-width: 100%;
 }
@@ -157,7 +167,7 @@ footer .icon {
 }
 
 
-.contact-info div {
+.contact-info div, .contact-info a {
     display: flex;
     height: 80px;
 }
@@ -175,12 +185,20 @@ footer .icon {
     padding: 19px;
 }
 
+.line {
+    background-color: var(--color-green);
+    width: 80px;
+    height: 4px;
+}
+
 /* --------------Landing page -----------------*/
 .hero {
-    background-image: url(../img/landing.jpg);
+    background-image: url(../img/hero-bg.jpg);
+    /* Pixabay, 2017, baerbar computer drink kop krus [ONLINE]. Available at: https://www.pexels.com/da-dk/foto/baerbar-computer-drink-kop-krus-434337/ [Accessed 30 April 2020]. */
     background-size: cover;
     max-width: 100%;
-    height: 110vh;
+    height: 100vh;
+    background-position: center;
 }
 
 .hero-text {
@@ -192,6 +210,13 @@ footer .icon {
 .hero-text p {
     font-size: 30px;
     color: var(--color-white);
+}
+
+.trekant {
+	border-right: 100vw solid transparent;
+    border-bottom: 17vh solid var(--color-white);
+    position: absolute;
+    bottom: -17px;
 }
 
 .lp-profile {
@@ -252,6 +277,7 @@ footer .icon {
 /* --------------Profil side -----------------*/
 .banner {
     background-image: url(../img/header.jpg);
+    /* picjumbo.com, 2016, Close up design [ONLINE]. Available at: https://www.pexels.com/da-dk/foto/beroringsskaerm-close-up-design-designer-196644/ [Accessed 30 April 2020]. */
     background-size: cover;
     max-width: 100%;
     height: 350px;
@@ -304,18 +330,14 @@ footer .icon {
 }
 
 .cases {
-    min-height: 55vh;
+    height: 55vh;
     width: 48%;
     background-color: var(--color-white);
     box-shadow: 0 3px 6px 0 #0000001c;
     margin-bottom: 5vh;
 }
 
-.cases div {
-    padding: 45% 20px 0 20px;
-}
-
-.purple-text {
+.green-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: var(--color-green);
@@ -331,23 +353,36 @@ footer .icon {
 }
 
 .umf {
-    background-image: url(../img/umf.jpg);
-    background-size: cover;
+    background-image: url(../img/imgGallery-umf1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F2561D;
 }
 
 .diabetes {
-    background-image: url(../img/diabetes.jpg);
-    background-size: cover;
+    background-image: url(../img/imgGallery-df1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #A10713;
 }
 
 .crossfit {
-    background-image: url(../img/header_logo2.png);
-    background-size: cover;
+    background-image: url(../img/imgGallery-cfaa1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #57C7F2;
 }
 
 .gradient {
     background-image: linear-gradient( #00000000, var(--section-dark));
-    min-height: 55vh;
+    height: 55vh;
+    width: 48%;
+    padding: 0 20px 0 20px;
+    display: table-cell;
+    vertical-align: bottom;
 }
 
 .gradient h4 {
@@ -356,36 +391,84 @@ footer .icon {
 
 .white {
     color: var(--color-white);
+    display: none;
 }
+
+.gradient:hover .white {
+    display: block;
+}
+
 /* --------------Case Studies side -----------------*/
-.caseStudy img {
-    margin: 5vh 0;
+.projektet {grid-area: projekt;}
+.processen {grid-area: proces;}
+.realiseringen {grid-area: realisering;}
+.procesImg {grid-area: procesImg; justify-self: center;}
+.ansvar {grid-area: ansvar;}
+.tools {grid-area: tools;}
+.projektLink {grid-area: links;
+    justify-self: end;}
+
+.case-info {
+    padding: 0 20px;
 }
 
-.caseStudy .wrap {
-    display: flex;
-    justify-content: space-between;
+.projektLink button {
+    display: block;
+    margin: 20px 0;
 }
 
-.wrap {
+.caseStudy {
     margin: 5vh 18vw;
+    display: grid;
+    grid-template-areas: 
+    'projekt ansvar'
+    'proces tools'
+    'procesImg procesImg'
+    'realisering links';
+    grid-column-gap: 40px;
+    grid-template-columns: 70% 30%;
 }
 
-.case-text {
-    width: 45vw;
+rect {
+    fill: var(--color-green);
 }
 
-.img-persona {
-    height: 35vh;
+.case-info li {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
 }
 
-.img-benchmarking {
-    height: 25vh;
+.imgGallery {
+    background-color: var(--section-dark);
+    min-height: 80vh;
+    padding: 100px 50px;
 }
 
-.design img {
-    width: 20vw;
+
+.imgBox {
+    display: grid;
+    grid-template-columns: 21% 21% 21% 21%;
 }
+
+.imgBoxApp {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.imgBox img {
+    transform: perspective(1000px) rotateY(20deg);
+    transition: .5s all ease-in-out;
+}
+
+.imgBox img:hover {
+    transform: perspective(0) rotateY(0) scale(1.2);
+    transition: .5s all ease-in-out;
+    z-index: 5;
+}
+
+
+
 /* --------------Media Queries -----------------*/
 @media screen and (max-width: 600px) {
     p {
@@ -450,7 +533,4 @@ footer .icon {
         padding: 20px;
     }
 
-    .wrap {
-        margin: 20px;
-    }
 }

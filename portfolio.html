@@ -20,7 +20,7 @@
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="about.html">Profil</a></li>
-                <li><a href="" class="active">Portfolio</a></li>
+                <li><a href="#" class="active">Portfolio</a></li>
                 <li><a href="#footer">Kontakt</a></li>
             </ul>
         </nav>
@@ -33,34 +33,33 @@
     <div class="pf-intro center-text">
         <p>
             Gennem studiet har jeg arbejdet på flere projekter der tager udgangspunkt i rigtige
-            virksomheder/organisationer. Projekterne foregår i grupper (3-4 studerende) og forløber sig ofte over 4-6
+            virksomheder/ organisationer. Projekterne foregår i grupper (2-4 studerende) og forløber sig ofte over 4-6
             uger.
             Udover projekterne på studiet laver jeg også en gang i mellem mine egne små projekter.</p>
-        <h3> Cases er pt ved at blive opdateret.. </h3>
         <div class="knapper">
-            <button onclick="function2()">Websites</button>
-            <button onclick="function1()">Web app</button>
+            <button onclick="showWebsite()">Websites</button>
+            <button onclick="showWebapp()">Web app</button>
 
         </div>
     </div>
 
     <article class="bg-light portfolio">
-        <div class="cases umf" id="umf">
-            <a href="https://mmd.ucn.dk/class/mmda0919/1081543/sem2/ungdomsringens-musikfestival/">
+        <div class="cases umf website" id="umf">
+            <a href="case-umf.html">
                 <div class="gradient">
                     <h4>Ungdomsringens Musikfestival</h4>
-                    <p class="purple-text">Website</p>
+                    <p class="green-text">Website</p>
                     <p class="white">Responsivt website for Ungdomsringens Musikfestival. <br>
                         2. semester tema 2</p>
                 </div>
             </a>
         </div>
 
-        <div class="cases diabetes" id="df">
-            <a href="https://mmd.ucn.dk/class/mmda0919/1081543/sem2/diabetesforeningen/">
+        <div class="cases diabetes webapp" id="df">
+            <a href="case-diabetes.html">
                 <div class="gradient">
                     <h4>Diabetesforeningen</h4>
-                    <p class="purple-text">Web app</p>
+                    <p class="green-text">Web app</p>
                     <p class="white">En web app for diabetesforeningen hvis formål er at digitalisere en indkøbsguide.
                         <br>
                         2. semester tema 1</p>
@@ -68,11 +67,11 @@
             </a>
         </div>
 
-        <div class="cases crossfit" id="df">
-            <a href="https://mmd.ucn.dk/class/mmda0919/1081543/sem2/crossfit-aalborg-eksamen/">
+        <div class="cases crossfit website" id="cf">
+            <a href="case-cfaa.html">
                 <div class="gradient">
                     <h4>Crossfit Aalborg</h4>
-                    <p class="purple-text">Website</p>
+                    <p class="green-text">Website</p>
                     <p class="white">2. semensters eksamen med Crossfit Aalborg som kunde
                         <br>
                         2. semester Eksamen</p>
@@ -85,7 +84,7 @@
 
     <footer class="bg-dark" id="footer">
         <article class="contact">
-            <h2>Er du blevet nysgerrig på vide mere?</h2>
+            <h2>Er du blevet nysgerrig på at vide mere?</h2>
             <p>Du er altid velkommen til at kontakte mig hvis du har spørgsmål eller bare vil vide mere om mig.</p>
             <div class="contact-info">
                 <div>
@@ -97,12 +96,16 @@
                     <p>nicoline.rusbak@live.dk</p>
                 </div>
                 <div>
-                    <i class="icon fab fa-linkedin"></i>
-                    <p>@Nicoline Christensen</p>
+                    <a href="https://www.linkedin.com/in/nicoline-rusbak-christensen-aa0b4b1a3/" target="_blank">
+                        <i class="icon fab fa-linkedin"></i>
+                        <p>@Nicoline Christensen</p>
+                    </a>
                 </div>
                 <div>
-                    <i class="icon fab fa-github"></i>
-                    <p>@Nicoline Christensen</p>
+                    <a href="https://github.com/NicolineRusbak">
+                        <i class="icon fab fa-github"></i>
+                        <p>@Nicoline Christensen</p>
+                    </a>
                 </div>
             </div>
         </article>
